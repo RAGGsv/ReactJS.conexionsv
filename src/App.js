@@ -1,23 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './componentes/Navbar';
+import Contador from './componentes/Contador';
+import Footer from './componentes/Footer';
+import Reloj from './componentes/Reloj';
+import Form from './componentes/Form';
+import Card from './componentes/Card';
+import Pokemon from './componentes/Pokemon';
 
+
+import TareaLista from './componentes/TareaLista';
 function App() {
+  const tareasIniciales = ['Hacer la compra', 'Limpiar la casa', 'Hacer ejercicio'];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <Contador/>
+      <Reloj/>
+      <br></br>
+      <TareaLista tareasIniciales={tareasIniciales}/>
+      <br></br>
+      <Form/>
+      <Card/>
+      <br></br>
+      <Pokemon/>
+      <br></br>
+
+      <Footer/>
+
     </div>
   );
 }
